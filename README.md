@@ -1,1 +1,5 @@
 # Tensorflow-API-REST
+This project is a REST FULL server made in Python with Tensorflow as neural networks framework. This project was made to be used with Postman as client, there is no warranty it will work with other API Testers or SPA frameworks like Angular or React. The rest is going to dispatch only two requests that are:
+- POST text/train/model_name.keras/batch/number/epochs/number | model_name.keras is the name of the model that would be saved in the server as a keras file, number after batch and epochs must be an integer number. The body of the http request must be a multipart-form data that includes a txt file that would be used to train the neural network
+- POST text/train/model_name.keras/length/number/lines/number | model_name.keras is the name of the model that would be load, if there isn't a file with that name, the response is going to be a 404 Not Found. Number after length and lines must be integer number. The body of the http request must be plain/txt that includes a text to generate an answer.
+To run this server, open the folder in Visual Studio Code and run main.py
