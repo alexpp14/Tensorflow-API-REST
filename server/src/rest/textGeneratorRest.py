@@ -13,18 +13,7 @@ import PIL
 import cv2
 from io import BytesIO
 import os
-import nltk
-nltk.download('stopwords')
 
-def tokenize_words(text : str):
-
-    text = text.lower()
-    tokenizer = nltk.tokenize.RegexpTokenizer(r"\w+")
-    tokens = tokenizer.tokenize(text)
-
-    filtered = filter(lambda token : token not in nltk.corpus.stopwords.words("english"),tokens)
-
-    return " ".join(filtered)
 
 class TextGenerator():
 
